@@ -1,12 +1,15 @@
 {
   "name": "js_form_app",
+  "homepage": "https://Pavel-Grigoryev.github.io/FormApp",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack serve",
     "dev": "webpack --node-env=development",
-    "build": "webpack --node-env=production"
+    "build": "webpack --node-env=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +36,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "gh-pages": "^5.0.0"
   }
 }
